@@ -1,0 +1,55 @@
+{
+  "db": "PostgreSQL",
+  "48bf2b90d971591f745445cff2880d1b076a88bc1971b9250bb4caafc19e3e62": {
+    "query": "\n            INSERT INTO public.urls\n            (url)\n            VALUES\n            ($1)\n            ON CONFLICT DO NOTHING;\n        ",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Left": [
+          "Text"
+        ]
+      },
+      "nullable": []
+    }
+  },
+  "4a41c1911a09e6d04a33441aaad38fdab99bee234a1fa43bb03e09737c682a32": {
+    "query": " \n            SELECT u.url\n            FROM public.urls AS u\n            WHERE u.key = $1;\n        ",
+    "describe": {
+      "columns": [
+        {
+          "ordinal": 0,
+          "name": "url",
+          "type_info": "Text"
+        }
+      ],
+      "parameters": {
+        "Left": [
+          "Int8"
+        ]
+      },
+      "nullable": [
+        false
+      ]
+    }
+  },
+  "b5575cdfff785276c5b1d0e047d32398679d0b2bfd6189a9aec82d88883fcf92": {
+    "query": "\n            SELECT u.key\n            FROM public.urls AS u\n            WHERE u.url = $1;\n        ",
+    "describe": {
+      "columns": [
+        {
+          "ordinal": 0,
+          "name": "key",
+          "type_info": "Int8"
+        }
+      ],
+      "parameters": {
+        "Left": [
+          "Text"
+        ]
+      },
+      "nullable": [
+        false
+      ]
+    }
+  }
+}

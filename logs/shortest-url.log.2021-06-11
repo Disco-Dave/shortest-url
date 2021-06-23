@@ -1,0 +1,53 @@
+Jun 10 20:41:24.730  INFO actix_server::builder: Starting 8 workers    
+Jun 10 20:41:24.767 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 10 20:41:24.768 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 10 20:41:24.769 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 10 20:41:24.771 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 10 20:41:24.772 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 10 20:41:24.774 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 10 20:41:24.776 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 10 20:41:24.777 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 10 20:41:24.778  INFO actix_server::builder: Starting "actix-web-service-[::1]:8081" service on [::1]:8081    
+Jun 10 20:41:24.779 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE    
+Jun 10 20:41:25.041 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 10 20:41:25.041 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 10 20:41:25.041 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 10 20:41:25.042 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 10 20:41:25.042 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 10 20:41:25.042 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 10 20:41:25.043 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 10 20:41:25.043 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 10 20:42:05.886 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 10 20:42:06.228  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39236 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=1247b667-4ce3-450b-9007-082deb52836a trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:42:06.230 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:42:24.129 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 10 20:42:24.132  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39238 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=7f3b87ff-085f-473e-9907-fa4ea9f63187 trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:42:24.134 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:42:39.502 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 10 20:42:39.503  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39240 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=c0d9c925-976b-458f-9dd6-df47fb2c4ad8 trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:42:39.505 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:42:40.225 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 10 20:42:40.227  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39242 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=b65d6043-2af4-4582-be33-331f571a38eb trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:42:40.227 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:42:44.011 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 10 20:42:44.012  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39244 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=89082f0b-9b38-47b9-9653-dbcee5609385 trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:42:44.013 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:43:13.412 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 10 20:43:13.413  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39246 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=d1e77571-761b-4673-9979-66d8bee725eb trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:43:13.414 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:43:13.984 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 10 20:43:13.985  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39248 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=4a613fa0-5f94-4b3b-8c48-6a331ecbbb9f trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:43:13.986 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:43:14.492 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 10 20:43:14.493  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39250 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=d3ab224b-2a60-427e-bd80-39bed3dd789d trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:43:14.494 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:43:14.931 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 10 20:43:14.934  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39252 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=61ae1b50-2a52-4537-9a8e-e30417e71780 trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:43:14.936 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:43:15.401 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 10 20:43:15.402  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39256 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=363f57b7-9125-4838-808a-b49e319e7704 trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:43:15.403 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:43:21.853 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 10 20:43:21.854  INFO HTTP request{http.method=GET http.route=/health-check http.flavor=1.1 http.scheme=http http.host=localhost:8081 http.client_ip=[::1]:39260 http.user_agent=curl/7.77.0 http.target=/health-check otel.kind="server" request_id=c1ed55d8-cb29-4990-be98-761678530c76 trace_id=00000000000000000000000000000000}:health-check handler: shortest_url::http::routes::health_check: Executing health-check handler
+Jun 10 20:43:21.854 TRACE mio::poll: deregistering event source from poller    
+Jun 10 20:43:24.530  INFO actix_server::builder: SIGINT received, exiting    

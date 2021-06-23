@@ -1,0 +1,245 @@
+Jun 16 16:16:30.541 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 16 16:16:30.541 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:16:30.541 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 16 16:16:30.541 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:16:42.625 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 16 16:16:42.635  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 1.223ms  
+Jun 16 16:16:42.635  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 477.194µs  
+Jun 16 16:16:42.636  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 16 16:16:42.642  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 660.992µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 16 16:16:42.647  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 2.406ms
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 16 16:16:42.648  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 600.557µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 16 16:16:42.649  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 184.357µs  
+Jun 16 16:16:42.649  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 512.998µs  
+Jun 16 16:16:42.650 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:16:42.650 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 16 16:16:42.653 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 16 16:16:42.653  INFO Server::run{addr=127.0.0.1:3030}: warp::server: listening on http://127.0.0.1:3030
+Jun 16 16:17:11.280 TRACE Server::run{addr=127.0.0.1:3030}: mio::poll: registering event source with poller: token=Token(3), interests=READABLE | WRITABLE    
+Jun 16 16:17:11.280 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:11.280 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 90])
+Jun 16 16:17:11.281 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(90)
+Jun 16 16:17:11.281 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [49, 50, 55, 46, 48, 46, 48, 46, 49, 58, 51, 48, 51, 48] }, Header { name: "User-Agent", value: [99, 117, 114, 108, 47, 55, 46, 55, 55, 46, 48] }, Header { name: "Accept", value: [42, 47, 42] }]
+Jun 16 16:17:11.281 DEBUG hyper::proto::h1::io: parsed 3 headers
+Jun 16 16:17:11.281 DEBUG hyper::proto::h1::conn: incoming body is empty
+Jun 16 16:17:11.281 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 16 16:17:11.281 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 16 16:17:11.281 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 16 16:17:11.282 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 16 16:17:11.282 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 16 16:17:11.282 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:11.282 TRACE hyper::proto::h1::io: parse eof
+Jun 16 16:17:11.282 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:11.282 DEBUG hyper::proto::h1::conn: read eof
+Jun 16 16:17:11.282 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:11.282 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:11.282 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:11.283 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+Jun 16 16:17:11.283 TRACE hyper::proto::h1::conn: shut down IO complete
+Jun 16 16:17:11.283 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:17:13.390 TRACE Server::run{addr=127.0.0.1:3030}: mio::poll: registering event source with poller: token=Token(16777219), interests=READABLE | WRITABLE    
+Jun 16 16:17:13.391 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:13.391 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 90])
+Jun 16 16:17:13.391 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(90)
+Jun 16 16:17:13.391 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [49, 50, 55, 46, 48, 46, 48, 46, 49, 58, 51, 48, 51, 48] }, Header { name: "User-Agent", value: [99, 117, 114, 108, 47, 55, 46, 55, 55, 46, 48] }, Header { name: "Accept", value: [42, 47, 42] }]
+Jun 16 16:17:13.391 DEBUG hyper::proto::h1::io: parsed 3 headers
+Jun 16 16:17:13.391 DEBUG hyper::proto::h1::conn: incoming body is empty
+Jun 16 16:17:13.392 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 16 16:17:13.392 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 16 16:17:13.392 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 16 16:17:13.392 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 16 16:17:13.392 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 16 16:17:13.392 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:13.393 TRACE hyper::proto::h1::io: parse eof
+Jun 16 16:17:13.393 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:13.393 DEBUG hyper::proto::h1::conn: read eof
+Jun 16 16:17:13.393 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:13.393 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:13.393 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:13.393 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+Jun 16 16:17:13.393 TRACE hyper::proto::h1::conn: shut down IO complete
+Jun 16 16:17:13.393 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:17:13.815 TRACE Server::run{addr=127.0.0.1:3030}: mio::poll: registering event source with poller: token=Token(33554435), interests=READABLE | WRITABLE    
+Jun 16 16:17:13.815 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:13.815 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 90])
+Jun 16 16:17:13.815 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(90)
+Jun 16 16:17:13.815 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [49, 50, 55, 46, 48, 46, 48, 46, 49, 58, 51, 48, 51, 48] }, Header { name: "User-Agent", value: [99, 117, 114, 108, 47, 55, 46, 55, 55, 46, 48] }, Header { name: "Accept", value: [42, 47, 42] }]
+Jun 16 16:17:13.816 DEBUG hyper::proto::h1::io: parsed 3 headers
+Jun 16 16:17:13.816 DEBUG hyper::proto::h1::conn: incoming body is empty
+Jun 16 16:17:13.816 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 16 16:17:13.816 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 16 16:17:13.816 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 16 16:17:13.816 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 16 16:17:13.816 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 16 16:17:13.816 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:13.817 TRACE hyper::proto::h1::io: parse eof
+Jun 16 16:17:13.817 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:13.817 DEBUG hyper::proto::h1::conn: read eof
+Jun 16 16:17:13.817 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:13.817 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:13.817 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:13.817 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+Jun 16 16:17:13.817 TRACE hyper::proto::h1::conn: shut down IO complete
+Jun 16 16:17:13.818 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:17:14.160 TRACE Server::run{addr=127.0.0.1:3030}: mio::poll: registering event source with poller: token=Token(50331651), interests=READABLE | WRITABLE    
+Jun 16 16:17:14.161 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:14.161 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 90])
+Jun 16 16:17:14.161 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(90)
+Jun 16 16:17:14.161 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [49, 50, 55, 46, 48, 46, 48, 46, 49, 58, 51, 48, 51, 48] }, Header { name: "User-Agent", value: [99, 117, 114, 108, 47, 55, 46, 55, 55, 46, 48] }, Header { name: "Accept", value: [42, 47, 42] }]
+Jun 16 16:17:14.161 DEBUG hyper::proto::h1::io: parsed 3 headers
+Jun 16 16:17:14.161 DEBUG hyper::proto::h1::conn: incoming body is empty
+Jun 16 16:17:14.161 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 16 16:17:14.162 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 16 16:17:14.162 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 16 16:17:14.162 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 16 16:17:14.162 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 16 16:17:14.162 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:14.162 TRACE hyper::proto::h1::io: parse eof
+Jun 16 16:17:14.162 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:14.163 DEBUG hyper::proto::h1::conn: read eof
+Jun 16 16:17:14.163 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:14.163 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:14.163 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:14.163 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+Jun 16 16:17:14.163 TRACE hyper::proto::h1::conn: shut down IO complete
+Jun 16 16:17:14.163 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:17:14.479 TRACE Server::run{addr=127.0.0.1:3030}: mio::poll: registering event source with poller: token=Token(67108867), interests=READABLE | WRITABLE    
+Jun 16 16:17:14.479 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:14.479 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 90])
+Jun 16 16:17:14.480 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(90)
+Jun 16 16:17:14.480 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [49, 50, 55, 46, 48, 46, 48, 46, 49, 58, 51, 48, 51, 48] }, Header { name: "User-Agent", value: [99, 117, 114, 108, 47, 55, 46, 55, 55, 46, 48] }, Header { name: "Accept", value: [42, 47, 42] }]
+Jun 16 16:17:14.480 DEBUG hyper::proto::h1::io: parsed 3 headers
+Jun 16 16:17:14.480 DEBUG hyper::proto::h1::conn: incoming body is empty
+Jun 16 16:17:14.480 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 16 16:17:14.480 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 16 16:17:14.480 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 16 16:17:14.481 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 16 16:17:14.481 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 16 16:17:14.481 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:14.481 TRACE hyper::proto::h1::io: parse eof
+Jun 16 16:17:14.481 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:14.481 DEBUG hyper::proto::h1::conn: read eof
+Jun 16 16:17:14.481 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:14.481 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:14.481 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:14.481 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+Jun 16 16:17:14.482 TRACE hyper::proto::h1::conn: shut down IO complete
+Jun 16 16:17:14.482 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:17:14.783 TRACE Server::run{addr=127.0.0.1:3030}: mio::poll: registering event source with poller: token=Token(83886083), interests=READABLE | WRITABLE    
+Jun 16 16:17:14.783 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:14.784 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 90])
+Jun 16 16:17:14.784 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(90)
+Jun 16 16:17:14.784 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [49, 50, 55, 46, 48, 46, 48, 46, 49, 58, 51, 48, 51, 48] }, Header { name: "User-Agent", value: [99, 117, 114, 108, 47, 55, 46, 55, 55, 46, 48] }, Header { name: "Accept", value: [42, 47, 42] }]
+Jun 16 16:17:14.784 DEBUG hyper::proto::h1::io: parsed 3 headers
+Jun 16 16:17:14.784 DEBUG hyper::proto::h1::conn: incoming body is empty
+Jun 16 16:17:14.784 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 16 16:17:14.784 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 16 16:17:14.785 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 16 16:17:14.785 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 16 16:17:14.785 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 16 16:17:14.785 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:14.785 TRACE hyper::proto::h1::io: parse eof
+Jun 16 16:17:14.785 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:14.785 DEBUG hyper::proto::h1::conn: read eof
+Jun 16 16:17:14.785 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:14.785 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:14.786 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:14.786 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+Jun 16 16:17:14.786 TRACE hyper::proto::h1::conn: shut down IO complete
+Jun 16 16:17:14.786 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:17:15.063 TRACE Server::run{addr=127.0.0.1:3030}: mio::poll: registering event source with poller: token=Token(100663299), interests=READABLE | WRITABLE    
+Jun 16 16:17:15.063 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:15.064 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 90])
+Jun 16 16:17:15.064 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(90)
+Jun 16 16:17:15.064 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [49, 50, 55, 46, 48, 46, 48, 46, 49, 58, 51, 48, 51, 48] }, Header { name: "User-Agent", value: [99, 117, 114, 108, 47, 55, 46, 55, 55, 46, 48] }, Header { name: "Accept", value: [42, 47, 42] }]
+Jun 16 16:17:15.064 DEBUG hyper::proto::h1::io: parsed 3 headers
+Jun 16 16:17:15.064 DEBUG hyper::proto::h1::conn: incoming body is empty
+Jun 16 16:17:15.064 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 16 16:17:15.064 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 16 16:17:15.065 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 16 16:17:15.065 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 16 16:17:15.065 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 16 16:17:15.065 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 16 16:17:15.065 TRACE hyper::proto::h1::io: parse eof
+Jun 16 16:17:15.065 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:15.065 DEBUG hyper::proto::h1::conn: read eof
+Jun 16 16:17:15.065 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:15.065 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 16 16:17:15.066 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 16 16:17:15.066 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+Jun 16 16:17:15.066 TRACE hyper::proto::h1::conn: shut down IO complete
+Jun 16 16:17:15.066 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:39:56.201 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 16 16:39:56.204  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 579.658µs  
+Jun 16 16:39:56.205  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 428.906µs  
+Jun 16 16:39:56.205  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 16 16:39:56.211  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 428.365µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 16 16:39:56.214  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 1.011ms
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 16 16:39:56.216  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 635.193µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 16 16:39:56.216  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 223.799µs  
+Jun 16 16:39:56.217  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 446.607µs  
+Jun 16 16:39:56.217 TRACE mio::poll: deregistering event source from poller    
+Jun 16 16:39:56.218 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 16 16:39:56.220 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    

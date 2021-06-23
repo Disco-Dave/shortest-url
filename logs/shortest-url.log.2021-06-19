@@ -1,0 +1,1574 @@
+Jun 18 21:33:35.948 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 18 21:33:35.949 TRACE mio::poll: deregistering event source from poller    
+Jun 18 21:33:35.949 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 18 21:33:35.949 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:35:35.596 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:35:35.600  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 596.345µs  
+Jun 19 15:35:35.600  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 431.010µs  
+Jun 19 15:35:35.606  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:35:35.612  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 6.301ms
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:35:35.616  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 1.314ms
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:35:35.617  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 604.096µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:35:35.618  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 192.108µs  
+Jun 19 15:35:35.618  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 407.197µs  
+Jun 19 15:35:35.618 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:35:35.619 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:36:06.930 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:36:06.933  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 559.702µs  
+Jun 19 15:36:06.934  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 440.471µs  
+Jun 19 15:36:06.934  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:36:06.940  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 356.523µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:36:06.943  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 996.482µs
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:36:06.944  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 593.444µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:36:06.945  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 202.008µs  
+Jun 19 15:36:06.945  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 443.681µs  
+Jun 19 15:36:06.945 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:36:06.946 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:36:58.544 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:36:58.548  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 652.600µs  
+Jun 19 15:36:58.548  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 490.606µs  
+Jun 19 15:36:58.549  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:36:58.554  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 371.144µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:36:58.557  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 972.860µs
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:36:58.559  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 576.684µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:36:58.560  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 172.966µs  
+Jun 19 15:36:58.560  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 454.481µs  
+Jun 19 15:36:58.560 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:36:58.561 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:36:58.563 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 19 15:37:10.376 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:37:10.379  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 608.396µs  
+Jun 19 15:37:10.380  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 528.269µs  
+Jun 19 15:37:10.380  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:37:10.386  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 402.228µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:37:10.389  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 1.173ms
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:37:10.391  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 558.631µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:37:10.392  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 200.989µs  
+Jun 19 15:37:10.392  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 447.702µs  
+Jun 19 15:37:10.392 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:37:10.393 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:37:10.395 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 19 15:37:23.447 TRACE mio::poll: registering event source with poller: token=Token(3), interests=READABLE | WRITABLE    
+Jun 19 15:37:23.447 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:23.447 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:23.447 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:23.448 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:23.448 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:23.448 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:23.448 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:23.448 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:23.448 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:23.448 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:23.448 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:23.449 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:23.449 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:23.449 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:23.449 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.182 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.183 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:28.183 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:28.183 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:28.183 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:28.183 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:28.183 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:28.183 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:28.184 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:28.184 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:28.184 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:28.184 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:28.184 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.184 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.184 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.382 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.382 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:28.382 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:28.382 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:28.383 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:28.383 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:28.383 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:28.383 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:28.383 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:28.383 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:28.383 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:28.384 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:28.384 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.384 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.384 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.547 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.547 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:28.547 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:28.547 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:28.547 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:28.548 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:28.548 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:28.548 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:28.548 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:28.548 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:28.548 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:28.549 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:28.549 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.549 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.549 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.743 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.744 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:28.744 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:28.744 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:28.744 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:28.744 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:28.744 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:28.744 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:28.744 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:28.744 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:28.745 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:28.745 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:28.745 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.745 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.745 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.859 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.859 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:28.859 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:28.859 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:28.859 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:28.860 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:28.860 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:28.860 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:28.860 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:28.860 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:28.860 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:28.860 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:28.860 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:28.861 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:28.861 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:29.061 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:29.061 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:29.061 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:29.061 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:29.061 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:29.061 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:29.062 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:29.062 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:29.062 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:29.062 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:29.062 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:29.062 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:29.062 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:29.063 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:29.063 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:29.188 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:29.188 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:29.188 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:29.188 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:29.189 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:29.189 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:29.189 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:29.189 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:29.189 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:29.189 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:29.189 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:29.190 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:29.190 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:29.190 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:29.190 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:29.389 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:29.389 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:29.389 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:29.389 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:29.389 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:29.389 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:29.390 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:29.390 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:29.390 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:29.390 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:29.390 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:29.390 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:29.390 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:29.390 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:29.391 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:29.499 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:29.499 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 224])
+Jun 19 15:37:29.500 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(165)
+Jun 19 15:37:29.500 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 45, 119, 119, 119, 45, 102, 111, 114, 109, 45, 117, 114, 108, 101, 110, 99, 111, 100, 101, 100] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [53, 57] }]
+Jun 19 15:37:29.500 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:37:29.500 DEBUG hyper::proto::h1::conn: incoming body is content-length (59 bytes)
+Jun 19 15:37:29.500 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:37:29.500 TRACE hyper::proto::h1::decode: decode; state=Length(59)
+Jun 19 15:37:29.500 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:37:29.501 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:37:29.501 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:37:29.501 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:37:29.501 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:29.501 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:37:29.501 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:37:51.726 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:37:51.729  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 696.505µs  
+Jun 19 15:37:51.730  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 539.690µs  
+Jun 19 15:37:51.730  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:37:51.736  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 398.737µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:37:51.739  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 1.131ms
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:37:51.741  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 765.361µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:37:51.741  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 185.207µs  
+Jun 19 15:37:51.742  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 431.990µs  
+Jun 19 15:37:51.742 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:37:51.743 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:37:51.745 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 19 15:38:38.068 TRACE mio::poll: registering event source with poller: token=Token(3), interests=READABLE | WRITABLE    
+Jun 19 15:38:38.068 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:38.068 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 182])
+Jun 19 15:38:38.068 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(137)
+Jun 19 15:38:38.069 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:38:38.069 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:38:38.069 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:38:38.069 TRACE warp::filters::path: "health-check"?: ""
+Jun 19 15:38:38.069 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:38:38.069 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:38:38.069 TRACE warp::filters::method: method::GET?: POST
+Jun 19 15:38:38.069 TRACE warp::filters::method: method::POST?: POST
+Jun 19 15:38:38.070 TRACE warp::filters::body: is_content_type application/json? "application/json"
+Jun 19 15:38:38.070 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.070 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.070  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 378.575µs  
+Jun 19 15:38:38.070 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.071 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.071 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.087  INFO sqlx::query: INSERT INTO public.urls (url) …; rows: 0, elapsed: 14.663ms
+
+INSERT INTO
+  public.urls (url)
+VALUES
+  ($1) ON CONFLICT DO NOTHING;
+  
+Jun 19 15:38:38.087 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.088 TRACE mio::poll: registering event source with poller: token=Token(4), interests=READABLE | WRITABLE    
+Jun 19 15:38:38.088 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.088  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 299.568µs  
+Jun 19 15:38:38.088 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.089 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.089 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.090 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.091 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:38.093  INFO sqlx::query: SELECT u.key FROM public.urls …; rows: 1, elapsed: 944.437µs
+
+SELECT
+  u.key
+FROM
+  public.urls AS u
+WHERE
+  u.url = $1;
+  
+Jun 19 15:38:38.093 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=201, body=Some(Known(3)), req_method=Some(POST)
+Jun 19 15:38:38.094 TRACE hyper::proto::h1::io: buffer.queue self.len=112 buf.len=3
+Jun 19 15:38:38.094 DEBUG hyper::proto::h1::io: flushed 115 bytes
+Jun 19 15:38:38.094 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:38.094 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:38.094 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:38.094  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 250.083µs  
+Jun 19 15:38:41.950 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:41.951 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 182])
+Jun 19 15:38:41.951 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(137)
+Jun 19 15:38:41.951 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:38:41.951 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:38:41.951 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:38:41.952 TRACE warp::filters::path: "health-check"?: ""
+Jun 19 15:38:41.952 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:38:41.952 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:38:41.952 TRACE warp::filters::method: method::GET?: POST
+Jun 19 15:38:41.952 TRACE warp::filters::method: method::POST?: POST
+Jun 19 15:38:41.952 TRACE warp::filters::body: is_content_type application/json? "application/json"
+Jun 19 15:38:41.953 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:41.953  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 285.466µs  
+Jun 19 15:38:41.953 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:41.953 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:41.955  INFO sqlx::query: INSERT INTO public.urls (url) …; rows: 0, elapsed: 420.819µs
+
+INSERT INTO
+  public.urls (url)
+VALUES
+  ($1) ON CONFLICT DO NOTHING;
+  
+Jun 19 15:38:41.956 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:41.956  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 359.943µs  
+Jun 19 15:38:41.956  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 169.276µs  
+Jun 19 15:38:41.956 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:41.956 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:41.958  INFO sqlx::query: SELECT u.key FROM public.urls …; rows: 1, elapsed: 392.387µs
+
+SELECT
+  u.key
+FROM
+  public.urls AS u
+WHERE
+  u.url = $1;
+  
+Jun 19 15:38:41.959 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=201, body=Some(Known(3)), req_method=Some(POST)
+Jun 19 15:38:41.959 TRACE hyper::proto::h1::io: buffer.queue self.len=112 buf.len=3
+Jun 19 15:38:41.959 DEBUG hyper::proto::h1::io: flushed 115 bytes
+Jun 19 15:38:41.959 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:41.959 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:41.959 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:41.959  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 217.480µs  
+Jun 19 15:38:42.538 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:42.538 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 182])
+Jun 19 15:38:42.538 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(137)
+Jun 19 15:38:42.538 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:38:42.539 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:38:42.539 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:38:42.539 TRACE warp::filters::path: "health-check"?: ""
+Jun 19 15:38:42.539 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:38:42.539 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:38:42.539 TRACE warp::filters::method: method::GET?: POST
+Jun 19 15:38:42.539 TRACE warp::filters::method: method::POST?: POST
+Jun 19 15:38:42.539 TRACE warp::filters::body: is_content_type application/json? "application/json"
+Jun 19 15:38:42.540 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.540  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 280.976µs  
+Jun 19 15:38:42.540 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.540 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.542  INFO sqlx::query: INSERT INTO public.urls (url) …; rows: 0, elapsed: 447.421µs
+
+INSERT INTO
+  public.urls (url)
+VALUES
+  ($1) ON CONFLICT DO NOTHING;
+  
+Jun 19 15:38:42.542 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.543  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 259.054µs  
+Jun 19 15:38:42.543  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 166.015µs  
+Jun 19 15:38:42.543 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.545  INFO sqlx::query: SELECT u.key FROM public.urls …; rows: 1, elapsed: 267.224µs
+
+SELECT
+  u.key
+FROM
+  public.urls AS u
+WHERE
+  u.url = $1;
+  
+Jun 19 15:38:42.545 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=201, body=Some(Known(3)), req_method=Some(POST)
+Jun 19 15:38:42.545 TRACE hyper::proto::h1::io: buffer.queue self.len=112 buf.len=3
+Jun 19 15:38:42.546 DEBUG hyper::proto::h1::io: flushed 115 bytes
+Jun 19 15:38:42.546 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:42.546 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:42.546 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:42.546  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 194.418µs  
+Jun 19 15:38:42.785 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:42.785 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 182])
+Jun 19 15:38:42.785 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(137)
+Jun 19 15:38:42.785 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:38:42.785 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:38:42.785 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:38:42.786 TRACE warp::filters::path: "health-check"?: ""
+Jun 19 15:38:42.786 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:38:42.786 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:38:42.786 TRACE warp::filters::method: method::GET?: POST
+Jun 19 15:38:42.786 TRACE warp::filters::method: method::POST?: POST
+Jun 19 15:38:42.786 TRACE warp::filters::body: is_content_type application/json? "application/json"
+Jun 19 15:38:42.786 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.787  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 245.243µs  
+Jun 19 15:38:42.787 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.787 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.789  INFO sqlx::query: INSERT INTO public.urls (url) …; rows: 0, elapsed: 382.875µs
+
+INSERT INTO
+  public.urls (url)
+VALUES
+  ($1) ON CONFLICT DO NOTHING;
+  
+Jun 19 15:38:42.789 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.789  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 297.587µs  
+Jun 19 15:38:42.789  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 167.325µs  
+Jun 19 15:38:42.789 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.790 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.792  INFO sqlx::query: SELECT u.key FROM public.urls …; rows: 1, elapsed: 363.064µs
+
+SELECT
+  u.key
+FROM
+  public.urls AS u
+WHERE
+  u.url = $1;
+  
+Jun 19 15:38:42.792 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=201, body=Some(Known(3)), req_method=Some(POST)
+Jun 19 15:38:42.792 TRACE hyper::proto::h1::io: buffer.queue self.len=112 buf.len=3
+Jun 19 15:38:42.792 DEBUG hyper::proto::h1::io: flushed 115 bytes
+Jun 19 15:38:42.792 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:42.792 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:42.793 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:42.793  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 258.434µs  
+Jun 19 15:38:42.952 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:42.952 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 182])
+Jun 19 15:38:42.952 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(137)
+Jun 19 15:38:42.952 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:38:42.953 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:38:42.953 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:38:42.953 TRACE warp::filters::path: "health-check"?: ""
+Jun 19 15:38:42.953 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:38:42.953 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:38:42.953 TRACE warp::filters::method: method::GET?: POST
+Jun 19 15:38:42.953 TRACE warp::filters::method: method::POST?: POST
+Jun 19 15:38:42.953 TRACE warp::filters::body: is_content_type application/json? "application/json"
+Jun 19 15:38:42.954 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.954  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 244.993µs  
+Jun 19 15:38:42.954 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.954 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.956  INFO sqlx::query: INSERT INTO public.urls (url) …; rows: 0, elapsed: 383.135µs
+
+INSERT INTO
+  public.urls (url)
+VALUES
+  ($1) ON CONFLICT DO NOTHING;
+  
+Jun 19 15:38:42.956 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.957  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 307.288µs  
+Jun 19 15:38:42.957  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 174.556µs  
+Jun 19 15:38:42.957 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.957 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:42.959  INFO sqlx::query: SELECT u.key FROM public.urls …; rows: 1, elapsed: 462.193µs
+
+SELECT
+  u.key
+FROM
+  public.urls AS u
+WHERE
+  u.url = $1;
+  
+Jun 19 15:38:42.960 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=201, body=Some(Known(3)), req_method=Some(POST)
+Jun 19 15:38:42.960 TRACE hyper::proto::h1::io: buffer.queue self.len=112 buf.len=3
+Jun 19 15:38:42.960 DEBUG hyper::proto::h1::io: flushed 115 bytes
+Jun 19 15:38:42.960 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:42.960 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:42.960 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:42.960  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 250.434µs  
+Jun 19 15:38:43.125 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:43.125 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 182])
+Jun 19 15:38:43.125 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(137)
+Jun 19 15:38:43.126 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:38:43.126 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:38:43.126 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:38:43.126 TRACE warp::filters::path: "health-check"?: ""
+Jun 19 15:38:43.126 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:38:43.126 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:38:43.126 TRACE warp::filters::method: method::GET?: POST
+Jun 19 15:38:43.126 TRACE warp::filters::method: method::POST?: POST
+Jun 19 15:38:43.126 TRACE warp::filters::body: is_content_type application/json? "application/json"
+Jun 19 15:38:43.127 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:43.127  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 276.115µs  
+Jun 19 15:38:43.127 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:43.129  INFO sqlx::query: INSERT INTO public.urls (url) …; rows: 0, elapsed: 294.807µs
+
+INSERT INTO
+  public.urls (url)
+VALUES
+  ($1) ON CONFLICT DO NOTHING;
+  
+Jun 19 15:38:43.129 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:43.129  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 263.514µs  
+Jun 19 15:38:43.130  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 155.674µs  
+Jun 19 15:38:43.130 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:43.132  INFO sqlx::query: SELECT u.key FROM public.urls …; rows: 1, elapsed: 266.875µs
+
+SELECT
+  u.key
+FROM
+  public.urls AS u
+WHERE
+  u.url = $1;
+  
+Jun 19 15:38:43.132 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=201, body=Some(Known(3)), req_method=Some(POST)
+Jun 19 15:38:43.132 TRACE hyper::proto::h1::io: buffer.queue self.len=112 buf.len=3
+Jun 19 15:38:43.132 DEBUG hyper::proto::h1::io: flushed 115 bytes
+Jun 19 15:38:43.133 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:43.133 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:43.133 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:43.133  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 225.991µs  
+Jun 19 15:38:43.250 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:43.250 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 182])
+Jun 19 15:38:43.251 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(137)
+Jun 19 15:38:43.251 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:38:43.251 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:38:43.251 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:38:43.251 TRACE warp::filters::path: "health-check"?: ""
+Jun 19 15:38:43.251 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:38:43.251 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:38:43.252 TRACE warp::filters::method: method::GET?: POST
+Jun 19 15:38:43.252 TRACE warp::filters::method: method::POST?: POST
+Jun 19 15:38:43.252 TRACE warp::filters::body: is_content_type application/json? "application/json"
+Jun 19 15:38:43.252 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:43.252  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 268.585µs  
+Jun 19 15:38:43.253 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:43.254  INFO sqlx::query: INSERT INTO public.urls (url) …; rows: 0, elapsed: 282.136µs
+
+INSERT INTO
+  public.urls (url)
+VALUES
+  ($1) ON CONFLICT DO NOTHING;
+  
+Jun 19 15:38:43.255 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:43.255  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 307.328µs  
+Jun 19 15:38:43.255  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 171.435µs  
+Jun 19 15:38:43.255 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:43.257  INFO sqlx::query: SELECT u.key FROM public.urls …; rows: 1, elapsed: 264.774µs
+
+SELECT
+  u.key
+FROM
+  public.urls AS u
+WHERE
+  u.url = $1;
+  
+Jun 19 15:38:43.258 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=201, body=Some(Known(3)), req_method=Some(POST)
+Jun 19 15:38:43.258 TRACE hyper::proto::h1::io: buffer.queue self.len=112 buf.len=3
+Jun 19 15:38:43.258 DEBUG hyper::proto::h1::io: flushed 115 bytes
+Jun 19 15:38:43.258 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:43.258 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:43.258 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:43.259  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 295.598µs  
+Jun 19 15:38:51.815 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:51.815 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 182])
+Jun 19 15:38:51.816 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(137)
+Jun 19 15:38:51.816 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:38:51.816 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:38:51.816 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:38:51.816 TRACE warp::filters::path: "health-check"?: "8"
+Jun 19 15:38:51.817 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:38:51.817 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:38:51.817 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:38:51.817 TRACE warp::filters::path: param?: "8"
+Jun 19 15:38:51.817 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:51.818  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 517.108µs  
+Jun 19 15:38:51.818 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:51.818 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:51.819 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:38:51.821  INFO sqlx::query: SELECT u.url FROM public.urls …; rows: 1, elapsed: 1.225ms
+
+SELECT
+  u.url
+FROM
+  public.urls AS u
+WHERE
+  u.key = $1;
+  
+Jun 19 15:38:51.822 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=301, body=None, req_method=Some(GET)
+Jun 19 15:38:51.822 DEBUG hyper::proto::h1::io: flushed 145 bytes
+Jun 19 15:38:51.822 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:51.822 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:38:51.822 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:38:51.823  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 332.310µs  
+Jun 19 15:39:07.121 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:07.121 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 182])
+Jun 19 15:39:07.121 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(137)
+Jun 19 15:39:07.121 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:39:07.121 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:39:07.122 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:39:07.122 TRACE warp::filters::path: "health-check"?: "8"
+Jun 19 15:39:07.122 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:39:07.122 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:39:07.122 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:39:07.122 TRACE warp::filters::path: param?: "8"
+Jun 19 15:39:07.122 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:39:07.123  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 373.675µs  
+Jun 19 15:39:07.123 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:39:07.123 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:39:07.124 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:39:07.126  INFO sqlx::query: SELECT u.url FROM public.urls …; rows: 1, elapsed: 797.384µs
+
+SELECT
+  u.url
+FROM
+  public.urls AS u
+WHERE
+  u.key = $1;
+  
+Jun 19 15:39:07.126 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=301, body=None, req_method=Some(GET)
+Jun 19 15:39:07.126 DEBUG hyper::proto::h1::io: flushed 145 bytes
+Jun 19 15:39:07.127 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:07.127 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:07.127 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:07.127  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 270.995µs  
+Jun 19 15:39:49.478 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:39:49.482  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 689.974µs  
+Jun 19 15:39:49.482  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 412.888µs  
+Jun 19 15:39:49.483  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:39:49.488  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 337.401µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:39:49.491  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 1.106ms
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:39:49.493  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 614.527µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:39:49.494  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 452.312µs  
+Jun 19 15:39:49.495  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 515.608µs  
+Jun 19 15:39:49.495 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:39:49.495 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:39:49.497 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 19 15:39:52.315 TRACE mio::poll: registering event source with poller: token=Token(3), interests=READABLE | WRITABLE    
+Jun 19 15:39:52.316 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:52.316 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:39:52.316 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:39:52.317 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:39:52.317 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:39:52.317 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:39:52.317 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:39:52.317 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:39:52.317 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:39:52.318 TRACE warp::filters::path: param?: "health-check"
+Jun 19 15:39:52.318 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=400, body=Some(Known(37)), req_method=Some(GET)
+Jun 19 15:39:52.318 TRACE hyper::proto::h1::io: buffer.queue self.len=117 buf.len=37
+Jun 19 15:39:52.318 DEBUG hyper::proto::h1::io: flushed 154 bytes
+Jun 19 15:39:52.318 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:52.318 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:52.318 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:54.412 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:54.412 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:39:54.412 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:39:54.412 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:39:54.412 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:39:54.412 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:39:54.413 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:39:54.413 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:39:54.413 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:39:54.413 TRACE warp::filters::path: param?: "health-check"
+Jun 19 15:39:54.413 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=400, body=Some(Known(37)), req_method=Some(GET)
+Jun 19 15:39:54.413 TRACE hyper::proto::h1::io: buffer.queue self.len=117 buf.len=37
+Jun 19 15:39:54.413 DEBUG hyper::proto::h1::io: flushed 154 bytes
+Jun 19 15:39:54.414 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:54.414 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:54.414 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:54.893 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:54.893 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:39:54.893 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:39:54.894 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:39:54.894 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:39:54.894 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:39:54.894 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:39:54.894 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:39:54.894 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:39:54.894 TRACE warp::filters::path: param?: "health-check"
+Jun 19 15:39:54.895 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=400, body=Some(Known(37)), req_method=Some(GET)
+Jun 19 15:39:54.895 TRACE hyper::proto::h1::io: buffer.queue self.len=117 buf.len=37
+Jun 19 15:39:54.895 DEBUG hyper::proto::h1::io: flushed 154 bytes
+Jun 19 15:39:54.895 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:54.895 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:54.895 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:55.311 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:55.312 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:39:55.312 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:39:55.312 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:39:55.312 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:39:55.312 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:39:55.313 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:39:55.313 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:39:55.313 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:39:55.313 TRACE warp::filters::path: param?: "health-check"
+Jun 19 15:39:55.313 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=400, body=Some(Known(37)), req_method=Some(GET)
+Jun 19 15:39:55.313 TRACE hyper::proto::h1::io: buffer.queue self.len=117 buf.len=37
+Jun 19 15:39:55.314 DEBUG hyper::proto::h1::io: flushed 154 bytes
+Jun 19 15:39:55.314 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:55.314 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:55.314 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:55.714 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:55.714 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:39:55.715 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:39:55.715 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:39:55.715 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:39:55.715 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:39:55.715 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:39:55.715 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:39:55.715 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:39:55.715 TRACE warp::filters::path: param?: "health-check"
+Jun 19 15:39:55.716 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=400, body=Some(Known(37)), req_method=Some(GET)
+Jun 19 15:39:55.716 TRACE hyper::proto::h1::io: buffer.queue self.len=117 buf.len=37
+Jun 19 15:39:55.716 DEBUG hyper::proto::h1::io: flushed 154 bytes
+Jun 19 15:39:55.716 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:55.716 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:55.716 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:56.131 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:56.132 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:39:56.132 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:39:56.132 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:39:56.132 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:39:56.132 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:39:56.132 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:39:56.133 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:39:56.133 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:39:56.133 TRACE warp::filters::path: param?: "health-check"
+Jun 19 15:39:56.133 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=400, body=Some(Known(37)), req_method=Some(GET)
+Jun 19 15:39:56.133 TRACE hyper::proto::h1::io: buffer.queue self.len=117 buf.len=37
+Jun 19 15:39:56.133 DEBUG hyper::proto::h1::io: flushed 154 bytes
+Jun 19 15:39:56.133 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:56.133 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:56.134 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:56.529 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:56.530 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:39:56.530 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:39:56.530 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:39:56.530 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:39:56.530 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:39:56.530 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:39:56.531 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:39:56.531 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:39:56.531 TRACE warp::filters::path: param?: "health-check"
+Jun 19 15:39:56.531 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=400, body=Some(Known(37)), req_method=Some(GET)
+Jun 19 15:39:56.531 TRACE hyper::proto::h1::io: buffer.queue self.len=117 buf.len=37
+Jun 19 15:39:56.531 DEBUG hyper::proto::h1::io: flushed 154 bytes
+Jun 19 15:39:56.531 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:56.532 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:56.532 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:56.919 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:56.919 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:39:56.919 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:39:56.919 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:39:56.919 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:39:56.919 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:39:56.919 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:39:56.920 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:39:56.920 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:39:56.920 TRACE warp::filters::path: param?: "health-check"
+Jun 19 15:39:56.920 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=400, body=Some(Known(37)), req_method=Some(GET)
+Jun 19 15:39:56.920 TRACE hyper::proto::h1::io: buffer.queue self.len=117 buf.len=37
+Jun 19 15:39:56.920 DEBUG hyper::proto::h1::io: flushed 154 bytes
+Jun 19 15:39:56.920 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:39:56.920 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:39:56.921 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:40:03.532 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:40:03.533 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:40:03.533 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:40:03.533 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:40:03.533 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:40:03.533 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:40:03.533 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:40:03.533 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:40:03.533 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:40:03.534 TRACE warp::filters::path: param?: "health-check"
+Jun 19 15:40:03.534 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=400, body=Some(Known(37)), req_method=Some(GET)
+Jun 19 15:40:03.534 TRACE hyper::proto::h1::io: buffer.queue self.len=117 buf.len=37
+Jun 19 15:40:03.534 DEBUG hyper::proto::h1::io: flushed 154 bytes
+Jun 19 15:40:03.534 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:40:03.534 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:40:03.534 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:23.507 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:41:23.510  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 556.451µs  
+Jun 19 15:41:23.510  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 457.632µs  
+Jun 19 15:41:23.511  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:41:23.516  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 345.942µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:41:23.519  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 1.049ms
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:41:23.521  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 618.377µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:41:23.522  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 209.269µs  
+Jun 19 15:41:23.523  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 602.786µs  
+Jun 19 15:41:23.523 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:41:23.523 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:41:23.526 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 19 15:41:23.545 TRACE mio::poll: registering event source with poller: token=Token(3), interests=READABLE | WRITABLE    
+Jun 19 15:41:23.545 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:23.545 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:23.545 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:23.546 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:23.546 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:23.546 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:23.546 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:23.546 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:23.546 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:23.546 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:23.547 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:23.547 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:23.547 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:23.547 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:23.547 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:23.707 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:23.707 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:23.707 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:23.707 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:23.707 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:23.707 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:23.708 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:23.708 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:23.708 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:23.708 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:23.708 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:23.708 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:23.708 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:23.708 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:23.709 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:23.881 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:23.881 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:23.881 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:23.881 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:23.881 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:23.882 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:23.882 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:23.882 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:23.882 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:23.882 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:23.882 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:23.882 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:23.882 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:23.883 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:23.883 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:24.055 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:24.055 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:24.055 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:24.056 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:24.056 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:24.056 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:24.056 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:24.056 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:24.056 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:24.056 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:24.057 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:24.057 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:24.057 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:24.057 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:24.057 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:25.151 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:25.151 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:25.151 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:25.151 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:25.151 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:25.151 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:25.152 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:25.152 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:25.152 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:25.152 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:25.152 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:25.152 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:25.152 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:25.153 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:25.153 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:25.645 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:25.645 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:25.645 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:25.645 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:25.645 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:25.646 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:25.646 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:25.646 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:25.646 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:25.646 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:25.646 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:25.646 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:25.646 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:25.647 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:25.647 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:25.812 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:25.813 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:25.813 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:25.813 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:25.813 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:25.813 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:25.813 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:25.814 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:25.814 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:25.814 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:25.814 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:25.814 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:25.814 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:25.814 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:25.815 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:25.998 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:25.998 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:25.998 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:25.998 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:25.999 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:25.999 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:25.999 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:25.999 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:25.999 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:25.999 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:25.999 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:25.999 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:26.000 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.000 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.000 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.157 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.157 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:26.157 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:26.158 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:26.158 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:26.158 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:26.158 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:26.158 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:26.158 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:26.158 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:26.158 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:26.159 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:26.159 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.159 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.159 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.364 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.364 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:26.364 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:26.365 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:26.365 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:26.365 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:26.365 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:26.365 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:26.365 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:26.365 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:26.365 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:26.366 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:26.366 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.366 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.366 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.520 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.520 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:26.520 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:26.520 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:26.521 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:26.521 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:26.521 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:26.521 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:26.521 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:26.521 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:26.521 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:26.522 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:26.522 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.522 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.522 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.702 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.702 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:26.702 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:26.702 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:26.702 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:26.703 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:26.703 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:26.703 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:26.703 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:26.703 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:26.703 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:26.703 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:26.703 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.704 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.704 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.859 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.859 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:26.860 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:26.860 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:26.860 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:26.860 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:26.860 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:26.860 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:26.860 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:26.860 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:26.861 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:26.861 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:26.861 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:26.861 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:26.861 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:27.032 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:27.032 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:27.032 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:27.032 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:27.033 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:27.033 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:27.033 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:27.033 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:27.033 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:27.033 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:27.033 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:27.033 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:27.034 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:27.034 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:27.034 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:27.205 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:27.206 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:41:27.206 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:41:27.206 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:27.206 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:27.206 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:27.206 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:41:27.206 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:27.206 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:27.207 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:27.207 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=404, body=None, req_method=Some(GET)
+Jun 19 15:41:27.207 DEBUG hyper::proto::h1::io: flushed 82 bytes
+Jun 19 15:41:27.207 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:27.207 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:27.207 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:33.558 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:33.558 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 187])
+Jun 19 15:41:33.558 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(142)
+Jun 19 15:41:33.558 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:41:33.558 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:41:33.558 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:41:33.559 TRACE warp::filters::path: "health-check"?: "urls"
+Jun 19 15:41:33.559 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:41:33.559 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:41:33.559 TRACE warp::filters::path: "urls"?: "urls"
+Jun 19 15:41:33.559 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:41:33.559 TRACE warp::filters::path: param?: "8"
+Jun 19 15:41:33.559 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:41:33.560  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 338.091µs  
+Jun 19 15:41:33.560 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:41:33.560 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:41:33.560 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:41:33.563  INFO sqlx::query: SELECT u.url FROM public.urls …; rows: 1, elapsed: 964.229µs
+
+SELECT
+  u.url
+FROM
+  public.urls AS u
+WHERE
+  u.key = $1;
+  
+Jun 19 15:41:33.563 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=301, body=None, req_method=Some(GET)
+Jun 19 15:41:33.563 DEBUG hyper::proto::h1::io: flushed 145 bytes
+Jun 19 15:41:33.563 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:33.564 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:41:33.564 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:41:33.564  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 258.094µs  
+Jun 19 15:42:05.633 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:42:05.636  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 570.843µs  
+Jun 19 15:42:05.636  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 436.830µs  
+Jun 19 15:42:05.637  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:42:05.642  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 350.652µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:42:05.645  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 980.180µs
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:42:05.647  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 683.863µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:42:05.648  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 183.086µs  
+Jun 19 15:42:05.648  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 463.642µs  
+Jun 19 15:42:05.648 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:42:05.649 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:42:05.651 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 19 15:42:10.298 TRACE mio::poll: registering event source with poller: token=Token(3), interests=READABLE | WRITABLE    
+Jun 19 15:42:10.299 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:10.299 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:42:10.299 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:42:10.299 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:42:10.299 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:42:10.300 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:42:10.300 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:42:10.300 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:42:10.300 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:42:10.300 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:42:10.300 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 19 15:42:10.300 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 19 15:42:10.300 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 19 15:42:10.301 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:10.301 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:10.301 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:10.878 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:10.879 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:42:10.879 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:42:10.879 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:42:10.879 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:42:10.879 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:42:10.879 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:42:10.880 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:42:10.880 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:42:10.880 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:42:10.880 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 19 15:42:10.880 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 19 15:42:10.880 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 19 15:42:10.881 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:10.881 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:10.881 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:11.078 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:11.078 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:42:11.078 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:42:11.078 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:42:11.079 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:42:11.079 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:42:11.079 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:42:11.079 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:42:11.079 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:42:11.079 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:42:11.079 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 19 15:42:11.079 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 19 15:42:11.080 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 19 15:42:11.080 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:11.080 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:11.080 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:11.197 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:11.197 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:42:11.197 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:42:11.197 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:42:11.198 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:42:11.198 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:42:11.198 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:42:11.198 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:42:11.198 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:42:11.198 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:42:11.198 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 19 15:42:11.199 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 19 15:42:11.199 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 19 15:42:11.199 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:11.199 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:11.199 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:11.389 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:11.389 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:42:11.389 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:42:11.389 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:42:11.390 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:42:11.390 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:42:11.390 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:42:11.390 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:42:11.390 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:42:11.390 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:42:11.390 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 19 15:42:11.390 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 19 15:42:11.390 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 19 15:42:11.391 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:11.391 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:11.391 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:11.513 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:11.513 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:42:11.513 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:42:11.513 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:42:11.514 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:42:11.514 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:42:11.514 TRACE warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:42:11.514 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:42:11.514 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:42:11.514 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:42:11.514 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 19 15:42:11.514 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 19 15:42:11.515 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 19 15:42:11.515 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:11.515 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:11.515 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:42:13.607 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:42:13.607 TRACE hyper::proto::h1::io: parse eof
+Jun 19 15:42:13.607 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 19 15:42:13.607 DEBUG hyper::proto::h1::conn: read eof
+Jun 19 15:42:13.607 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 19 15:42:13.607 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 19 15:42:13.607 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 19 15:42:13.608 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+Jun 19 15:42:13.608 TRACE hyper::proto::h1::conn: shut down IO complete
+Jun 19 15:42:13.608 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:47:16.472 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:47:16.475  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 505.216µs  
+Jun 19 15:47:16.476  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 400.087µs  
+Jun 19 15:47:16.476  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:47:16.482  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 324.950µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:47:16.485  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 1.172ms
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:47:16.487  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 613.956µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:47:16.487  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 217.160µs  
+Jun 19 15:47:16.488  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 410.658µs  
+Jun 19 15:47:16.488 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:47:16.488 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:47:16.490 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 19 15:47:32.365 TRACE mio::poll: registering event source with poller: token=Token(3), interests=READABLE | WRITABLE    
+Jun 19 15:47:32.365 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:47:32.365 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 339])
+Jun 19 15:47:32.366 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(339)
+Jun 19 15:47:32.366 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [77, 111, 122, 105, 108, 108, 97, 47, 53, 46, 48, 32, 40, 88, 49, 49, 59, 32, 76, 105, 110, 117, 120, 32, 120, 56, 54, 95, 54, 52, 59, 32, 114, 118, 58, 56, 57, 46, 48, 41, 32, 71, 101, 99, 107, 111, 47, 50, 48, 49, 48, 48, 49, 48, 49, 32, 70, 105, 114, 101, 102, 111, 120, 47, 56, 57, 46, 48] }, Header { name: "Accept", value: [116, 101, 120, 116, 47, 104, 116, 109, 108, 44, 97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 104, 116, 109, 108, 43, 120, 109, 108, 44, 97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 120, 109, 108, 59, 113, 61, 48, 46, 57, 44, 105, 109, 97, 103, 101, 47, 119, 101, 98, 112, 44, 42, 47, 42, 59, 113, 61, 48, 46, 56] }, Header { name: "Accept-Language", value: [101, 110, 45, 85, 83, 44, 101, 110, 59, 113, 61, 48, 46, 53] }, Header { name: "Accept-Encoding", value: [103, 122, 105, 112, 44, 32, 100, 101, 102, 108, 97, 116, 101] }, Header { name: "DNT", value: [49] }, Header { name: "Connection", value: [107, 101, 101, 112, 45, 97, 108, 105, 118, 101] }, Header { name: "Upgrade-Insecure-Requests", value: [49] }]
+Jun 19 15:47:32.366 DEBUG hyper::proto::h1::io: parsed 8 headers
+Jun 19 15:47:32.366 DEBUG hyper::proto::h1::conn: incoming body is empty
+Jun 19 15:47:32.366 TRACE warp::filters::path: "health-check"?: "urls"
+Jun 19 15:47:32.366 TRACE warp::filters::path: "urls"?: "urls"
+Jun 19 15:47:32.366 TRACE warp::filters::method: method::GET?: GET
+Jun 19 15:47:32.367 TRACE warp::filters::path: param?: "8"
+Jun 19 15:47:32.367 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:47:32.367  INFO Handle getting a url by a slug{slug="8"}: sqlx::query: /* SQLx ping */; rows: 0, elapsed: 414.878µs  
+Jun 19 15:47:32.368 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:47:32.368 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:47:32.368 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: KeepAlive, writing: Init, keep_alive: Busy }
+Jun 19 15:47:32.371  INFO Handle getting a url by a slug{slug="8"}: sqlx::query: SELECT u.url FROM public.urls …; rows: 1, elapsed: 1.367ms
+
+SELECT
+  u.url
+FROM
+  public.urls AS u
+WHERE
+  u.key = $1;
+  
+Jun 19 15:47:32.371  INFO Handle getting a url by a slug{slug="8"}: shortest_url::http: The url was found: https://www.youtube.com/watch?v=lsile6MA2QU
+Jun 19 15:47:32.371 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=301, body=None, req_method=Some(GET)
+Jun 19 15:47:32.372 DEBUG hyper::proto::h1::io: flushed 145 bytes
+Jun 19 15:47:32.372 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:47:32.372 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:47:32.372 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:47:32.372  INFO sqlx::query: /* SQLx ping */; rows: 0, elapsed: 199.269µs  
+Jun 19 15:49:34.506 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 15:49:34.509  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 536.570µs  
+Jun 19 15:49:34.509  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 431.190µs  
+Jun 19 15:49:34.509  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 15:49:34.515  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 335.231µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 15:49:34.518  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 962.398µs
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 15:49:34.520  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 663.041µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 15:49:34.520  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 205.399µs  
+Jun 19 15:49:34.521  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 436.170µs  
+Jun 19 15:49:34.521 TRACE mio::poll: deregistering event source from poller    
+Jun 19 15:49:34.522 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 15:49:34.524 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 19 15:50:14.716 TRACE mio::poll: registering event source with poller: token=Token(3), interests=READABLE | WRITABLE    
+Jun 19 15:50:14.717 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:50:14.717 TRACE parse_headers: hyper::proto::h1::role: Request.parse([Header; 100], [u8; 193])
+Jun 19 15:50:14.717 TRACE parse_headers: hyper::proto::h1::role: Request.parse Complete(148)
+Jun 19 15:50:14.718 TRACE parse_headers: hyper::proto::h1::role: headers: [Header { name: "Host", value: [108, 111, 99, 97, 108, 104, 111, 115, 116, 58, 56, 48, 56, 49] }, Header { name: "User-Agent", value: [105, 110, 115, 111, 109, 110, 105, 97, 47, 50, 48, 50, 49, 46, 51, 46, 48] }, Header { name: "Content-Type", value: [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110] }, Header { name: "Accept", value: [42, 47, 42] }, Header { name: "Content-Length", value: [52, 53] }]
+Jun 19 15:50:14.718 DEBUG hyper::proto::h1::io: parsed 5 headers
+Jun 19 15:50:14.718 DEBUG hyper::proto::h1::conn: incoming body is content-length (45 bytes)
+Jun 19 15:50:14.718 DEBUG request{method=GET path=/health-check version=HTTP/1.1 remote.addr=127.0.0.1:56812}: warp::filters::trace: received request
+Jun 19 15:50:14.718  INFO request{method=GET path=/health-check version=HTTP/1.1 remote.addr=127.0.0.1:56812}: warp::filters::trace: processing request
+Jun 19 15:50:14.718 TRACE request{method=GET path=/health-check version=HTTP/1.1 remote.addr=127.0.0.1:56812}: warp::filters::path: "health-check"?: "health-check"
+Jun 19 15:50:14.719 TRACE hyper::proto::h1::decode: decode; state=Length(45)
+Jun 19 15:50:14.719 DEBUG hyper::proto::h1::conn: incoming body completed
+Jun 19 15:50:14.719 TRACE request{method=GET path=/health-check version=HTTP/1.1 remote.addr=127.0.0.1:56812}: warp::filters::method: method::GET?: GET
+Jun 19 15:50:14.719  INFO request{method=GET path=/health-check version=HTTP/1.1 remote.addr=127.0.0.1:56812}: warp::filters::trace: finished processing with success status=204
+Jun 19 15:50:14.719 TRACE encode_headers: hyper::proto::h1::role: Server::encode status=204, body=None, req_method=Some(GET)
+Jun 19 15:50:14.719 TRACE encode_headers: hyper::proto::h1::role: server body forced to 0; method=Some(GET), status=204
+Jun 19 15:50:14.720 DEBUG hyper::proto::h1::io: flushed 64 bytes
+Jun 19 15:50:14.720 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:50:14.720 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:50:14.720 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Init, writing: Init, keep_alive: Idle }
+Jun 19 15:50:32.823 TRACE hyper::proto::h1::conn: Conn::read_head
+Jun 19 15:50:32.823 TRACE hyper::proto::h1::io: parse eof
+Jun 19 15:50:32.823 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 19 15:50:32.823 DEBUG hyper::proto::h1::conn: read eof
+Jun 19 15:50:32.823 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 19 15:50:32.824 TRACE hyper::proto::h1::conn: State::close_read()
+Jun 19 15:50:32.824 TRACE hyper::proto::h1::conn: State::close_write()
+Jun 19 15:50:32.824 TRACE hyper::proto::h1::conn: flushed({role=server}): State { reading: Closed, writing: Closed, keep_alive: Disabled }
+Jun 19 15:50:32.824 TRACE hyper::proto::h1::conn: shut down IO complete
+Jun 19 15:50:32.824 TRACE mio::poll: deregistering event source from poller    
+Jun 19 16:03:22.433 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
+Jun 19 16:03:22.435  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 320.610µs  
+Jun 19 16:03:22.435  INFO sqlx::query: SELECT pg_advisory_lock($1); rows: 1, elapsed: 198.719µs  
+Jun 19 16:03:22.435  INFO : relation "_sqlx_migrations" already exists, skipping    
+Jun 19 16:03:22.436  INFO sqlx::query: CREATE TABLE IF NOT …; rows: 0, elapsed: 172.786µs
+
+CREATE TABLE IF NOT EXISTS _sqlx_migrations (
+  version BIGINT PRIMARY KEY,
+  description TEXT NOT NULL,
+  installed_on TIMESTAMPTZ NOT NULL DEFAULT now(),
+  success BOOLEAN NOT NULL,
+  checksum BYTEA NOT NULL,
+  execution_time BIGINT NOT NULL
+);
+  
+Jun 19 16:03:22.436  INFO sqlx::query: SELECT version FROM _sqlx_migrations …; rows: 0, elapsed: 628.218µs
+
+SELECT
+  version
+FROM
+  _sqlx_migrations
+WHERE
+  success = false
+ORDER BY
+  version
+LIMIT
+  1
+  
+Jun 19 16:03:22.437  INFO sqlx::query: SELECT version, checksum FROM …; rows: 1, elapsed: 258.824µs
+
+SELECT
+  version,
+  checksum
+FROM
+  _sqlx_migrations
+ORDER BY
+  version
+  
+Jun 19 16:03:22.437  INFO sqlx::query: SELECT current_database(); rows: 1, elapsed: 72.896µs  
+Jun 19 16:03:22.437  INFO sqlx::query: SELECT pg_advisory_unlock($1); rows: 1, elapsed: 185.247µs  
+Jun 19 16:03:22.437 TRACE mio::poll: deregistering event source from poller    
+Jun 19 16:03:22.437 TRACE mio::poll: registering event source with poller: token=Token(16777217), interests=READABLE | WRITABLE    
+Jun 19 16:03:22.439 TRACE mio::poll: registering event source with poller: token=Token(2), interests=READABLE | WRITABLE    
+Jun 19 19:28:55.052 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 19 19:28:55.052 TRACE mio::poll: deregistering event source from poller    
+Jun 19 19:28:55.052 TRACE mio::poll: registering event source with poller: token=Token(16777216), interests=READABLE | WRITABLE    
+Jun 19 19:28:55.052 TRACE mio::poll: deregistering event source from poller    

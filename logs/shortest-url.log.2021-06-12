@@ -1,0 +1,72 @@
+Jun 11 22:14:50.982  INFO actix_server::builder: Starting 16 workers    
+Jun 11 22:14:50.982 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.983 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.983 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.983 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.983 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.983 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.983 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.984 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.984 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.984 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.984 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.984 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.984 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.985 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.985 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.985 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.985 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.985 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.985 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.985 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.986 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.986 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:50.986 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:50.986 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:51.021 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:51.022 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:51.022 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:51.022 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:51.022 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:51.022 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:14:51.023 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:51.023  INFO actix_server::builder: Starting "actix-web-service-[::1]:8081" service on [::1]:8081    
+Jun 11 22:14:51.023 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE    
+Jun 11 22:14:51.023 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:14:52.193  INFO actix_server::builder: SIGINT received, exiting    
+Jun 11 22:25:16.022  INFO actix_server::builder: Starting 16 workers    
+Jun 11 22:25:16.022 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.022 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.022 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.022 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.022 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.022 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.022 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.022 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.022 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.022 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.022 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.023 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.023 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.023 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.023 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.023 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.023 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.023 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.023 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.023 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.023 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.023 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.023 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.023 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.050 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.050 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.050 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.050 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.050 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.050 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.050 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
+Jun 11 22:25:16.050  INFO actix_server::builder: Starting "actix-web-service-[::1]:8081" service on [::1]:8081    
+Jun 11 22:25:16.050 TRACE actix_server::worker: Service "actix-web-service-[::1]:8081" is available    
+Jun 11 22:25:16.050 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE    
+Jun 11 22:25:17.129  INFO actix_server::builder: SIGINT received, exiting    

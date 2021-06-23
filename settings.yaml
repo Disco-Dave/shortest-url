@@ -1,0 +1,16 @@
+http:
+  host: 127.0.0.1
+  port: 8081
+
+log:
+  directive: trace
+  log_dir: ./logs
+
+
+database:
+  host: "localhost"
+  port: 5432
+  migration_username: "postgres"
+  migration_password: "password"
+  app_password: "password"
+  database_name: "shortest_url"
