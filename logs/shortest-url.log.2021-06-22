@@ -1,4 +1,0 @@
-Jun 22 19:56:43.653 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
-Jun 22 19:56:55.256 TRACE mio::poll: registering event source with poller: token=Token(0), interests=READABLE | WRITABLE    
-Jun 22 19:56:55.259 TRACE mio::poll: registering event source with poller: token=Token(1), interests=READABLE | WRITABLE    
-Jun 22 19:56:55.259  INFO shortest_url: Now listening on: 127.0.0.1:8081
