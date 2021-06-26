@@ -2,6 +2,7 @@ import * as React from "react";
 
 type Props = {
   url: string;
+  urlError?: string;
   onUrlChange: (newUrl: string) => void;
   onSubmit: () => void;
   onReset: () => void;
@@ -15,14 +16,17 @@ export default function UrlForm(props: Props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="url">URL</label>
-      <input
-        id="url"
-        name="url"
-        type="text"
-        value={props.url}
-        onChange={(e) => props.onUrlChange(e.currentTarget.value)}
-      />
+      <div>
+        <label htmlFor="url">URL</label>
+        <input
+          id="url"
+          name="url"
+          type="text"
+          value={props.url}
+          onChange={(e) => props.onUrlChange(e.currentTarget.value)}
+        />
+        {props.urlError && <p>{props.urlError}</p>}
+      </div>
       <div>
         <button id="shorten-url" type="submit">
           Shorten

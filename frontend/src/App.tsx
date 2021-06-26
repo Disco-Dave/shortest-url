@@ -7,23 +7,21 @@ export default function App() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [url, setUrl] = React.useState("");
   const [shortUrl, setShortUrl] = React.useState("");
-  const [error, setError] = React.useState("");
+  const [urlError, setUrlError] = React.useState("");
 
   async function handleSubmit() {
     const trimmedUrl = url.trim();
 
     if (trimmedUrl) {
       try {
-        setError("");
+        setUrlError("");
         setIsLoading(true);
 
         const result = await api.postUrl(trimmedUrl);
         if (result.kind === "right") {
-          setShortUrl(
-            `http://localhost/api/${encodeURIComponent(result.value)}`
-          );
+          setShortUrl(api.getUrl(result.value));
         } else {
-          setError(result.value);
+          setUrlError(result.value);
         }
       } finally {
         setIsLoading(false);
@@ -34,7 +32,7 @@ export default function App() {
   function handleReset() {
     setUrl("");
     setShortUrl("");
-    setError("");
+    setUrlError("");
   }
 
   return (
@@ -42,13 +40,13 @@ export default function App() {
       <h1>URL Shortener</h1>
       <UrlForm
         url={url}
+        urlError={urlError}
         onReset={handleReset}
         onSubmit={handleSubmit}
         onUrlChange={setUrl}
       />
       <ShortUrl shortUrl={shortUrl} />
       <p>{isLoading.toString()}</p>
-      <p>{error}</p>
     </main>
   );
 }
