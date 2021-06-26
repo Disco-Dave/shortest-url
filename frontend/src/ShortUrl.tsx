@@ -9,7 +9,7 @@ export default function ShortUrl(props: Props) {
     setClipboardMessage("");
   }, [props.shortUrl]);
 
-  const handleCopy: React.MouseEventHandler<HTMLInputElement> = async () => {
+  async function handleCopy() {
     if (props.shortUrl) {
       await navigator.clipboard.writeText(props.shortUrl);
       setClipboardMessage("URL copied to clipboard");
@@ -17,7 +17,7 @@ export default function ShortUrl(props: Props) {
         setClipboardMessage("");
       }, 5000);
     }
-  };
+  }
 
   return (
     <div>
