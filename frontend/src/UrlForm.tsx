@@ -1,5 +1,3 @@
-import * as React from "react";
-
 type Props = {
   url: string;
   urlError?: string;
@@ -9,10 +7,10 @@ type Props = {
 };
 
 export default function UrlForm(props: Props) {
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
+  function handleSubmit(event: { preventDefault: () => void }) {
     event.preventDefault();
     props.onSubmit();
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit}>
