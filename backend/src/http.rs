@@ -57,7 +57,7 @@ pub async fn handle_post_url(url: String, db: Arc<PgPool>) -> Result<Response, I
         Err(InvalidUrl) => {
             tracing::info!("An invalid url was provided.");
 
-            let reply = warp::reply::json(&"Url is invalid");
+            let reply = warp::reply::json(&"URL is invalid");
             warp::reply::with_status(reply, http::StatusCode::BAD_REQUEST).into_response()
         }
         Err(SqlError(e)) => {

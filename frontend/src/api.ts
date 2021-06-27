@@ -5,6 +5,9 @@ export type Either<TLeft, TRight> =
 export const apiUrl: string =
   process.env.SHORTEST_URL_API_URL ?? "http://localhost/api/";
 
+export const shortUrl: string =
+  process.env.SHORTEST_URL_SHORT_URL ?? "http://localhost/api/";
+
 export async function postUrl(url: string): Promise<Either<string, string>> {
   const response = await fetch(apiUrl, {
     method: "POST",
@@ -25,5 +28,5 @@ export async function postUrl(url: string): Promise<Either<string, string>> {
 }
 
 export function getUrl(slug: string) {
-  return `${apiUrl}${encodeURIComponent(slug)}`;
+  return `${shortUrl}${encodeURIComponent(slug)}`;
 }

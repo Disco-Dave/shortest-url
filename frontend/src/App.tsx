@@ -10,9 +10,11 @@ export default function App() {
   const [urlError, setUrlError] = React.useState("");
 
   async function handleSubmit() {
+    handleUrlBlur();
+
     const trimmedUrl = url.trim();
 
-    if (trimmedUrl) {
+    if (trimmedUrl && !urlError && !isLoading) {
       try {
         setUrlError("");
         setIsLoading(true);
@@ -29,6 +31,22 @@ export default function App() {
     }
   }
 
+  function handleUrlBlur() {
+    if (url.trim() === "")  {
+      setUrlError("Required");
+    }
+    else {
+      setUrlError("");
+
+      try {
+        new URL(url);
+      }
+      catch {
+        setUrlError("URL is invalid")
+      }
+    }
+  }
+
   function handleReset() {
     setUrl("");
     setShortUrl("");
@@ -36,17 +54,18 @@ export default function App() {
   }
 
   return (
-    <main>
-      <h1>URL Shortener</h1>
+    <main className="main">
+      <h1 className="title">URL Shortener</h1>
       <UrlForm
         url={url}
         urlError={urlError}
+        onUrlChange={setUrl}
+        onUrlBlur={handleUrlBlur}
         onReset={handleReset}
         onSubmit={handleSubmit}
-        onUrlChange={setUrl}
+        isLoading={isLoading}
       />
       <ShortUrl shortUrl={shortUrl} />
-      <p>{isLoading.toString()}</p>
     </main>
   );
 }

@@ -20,17 +20,18 @@ export default function ShortUrl(props: Props) {
   }
 
   return (
-    <div>
-      <label htmlFor="shortened-url">Short URL</label>
+    <div className="field short-url">
+      <label htmlFor="shortened-url" className="field__label">Short URL</label>
       <input
         id="short-url"
+        className="field__input"
         name="short-url"
         type="text"
         readOnly
         value={props.shortUrl}
         onClick={handleCopy}
       />
-      {clipboardMessage && <span>{clipboardMessage}</span>}
+      {clipboardMessage && <p className="field__feedback">{clipboardMessage}</p>}
     </div>
   );
 }
