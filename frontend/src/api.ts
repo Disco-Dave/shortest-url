@@ -3,10 +3,10 @@ export type Either<TLeft, TRight> =
   | { kind: "right"; value: TRight };
 
 export const apiUrl: string =
-  process.env.SHORTEST_URL_API_URL ?? "http://localhost/api/";
+  process.env.REACT_APP_SHORTEST_URL_API_URL ?? "http://localhost/api/";
 
 export const shortUrl: string =
-  process.env.SHORTEST_URL_SHORT_URL ?? "http://localhost/api/";
+  process.env.REACT_APP_SHORTEST_URL_SHORT_URL ?? "http://localhost/api/";
 
 export async function postUrl(url: string): Promise<Either<string, string>> {
   const response = await fetch(apiUrl, {
