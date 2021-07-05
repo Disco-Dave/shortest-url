@@ -2,6 +2,7 @@ use std::convert::Infallible;
 use std::{net::SocketAddr, sync::Arc};
 
 use sqlx::PgPool;
+use uuid::Uuid;
 use warp::reply::Response;
 use warp::{Filter, Future, Reply};
 
@@ -109,7 +110,11 @@ pub async fn start(
     let filters = get_health_check
         .or(get_url)
         .or(post_url)
-        .with(warp::filters::trace::request());
+        .with(warp::filters::trace::request())
+        .with(warp::filters::trace::trace(|_info| {
+            let request_id = Uuid::new_v4();
+            tracing::info_span!("request", id = ?request_id)
+        }));
 
     warp::serve(filters).bind_ephemeral(create_socket_addr(settings))
 }

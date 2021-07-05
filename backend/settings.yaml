@@ -6,7 +6,6 @@ log:
   directive: trace
   log_dir: ./logs
 
-
 database:
   host: "localhost"
   port: 5432
