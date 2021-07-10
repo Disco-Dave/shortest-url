@@ -80,16 +80,28 @@ impl Display for Base62 {
     }
 }
 
+#[derive(Debug, PartialEq)]
+pub enum Error {
+    InvalidChar(char),
+    IsEmpty,
+}
+
 impl TryFrom<&str> for Base62 {
-    type Error = char;
+    type Error = Error;
 
     fn try_from(value: &str) -> Result<Self, Self::Error> {
-        let digits = value
-            .chars()
-            .map(|c| Digit::from_char(c).ok_or(c))
-            .collect::<Result<Vec<Digit>, Self::Error>>()?;
+        let trimmed_value = value.trim();
 
-        Ok(Self(digits))
+        if trimmed_value.is_empty() {
+            Err(Error::IsEmpty)
+        } else {
+            let digits = value
+                .chars()
+                .map(|c| Digit::from_char(c).ok_or(Error::InvalidChar(c)))
+                .collect::<Result<Vec<Digit>, Self::Error>>()?;
+
+            Ok(Self(digits))
+        }
     }
 }
 
@@ -143,7 +155,7 @@ mod tests {
         for n in 10_000u64..60_000 {
             let base62: Base62 = n.into();
             let base62_string: &str = &base62.to_string();
-            let back_to_base62: Result<Base62, char> = base62_string.try_into();
+            let back_to_base62: Result<Base62, Error> = base62_string.try_into();
 
             assert_eq!(Ok(base62), back_to_base62, "{}", n);
         }
@@ -151,7 +163,16 @@ mod tests {
 
     #[test]
     fn reports_invalid_digits() {
-        let base62: Result<Base62, char> = "adb!930".try_into();
-        assert_eq!(Err('!'), base62);
+        let base62: Result<Base62, Error> = "adb!930".try_into();
+        assert_eq!(Err(Error::InvalidChar('!')), base62);
+    }
+
+    #[test]
+    fn complains_about_empty_strings() {
+        let empties = ["", "  ", "\n"];
+        for empty in empties {
+            let base62: Result<Base62, Error> = empty.try_into();
+            assert_eq!(Err(Error::IsEmpty), base62);
+        }
     }
 }

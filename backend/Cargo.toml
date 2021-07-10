@@ -43,3 +43,6 @@ sqlx = { version = "0.5.5", default-features = false, features = [
   "offline",
   "migrate",
 ] }
+
+[profile.release]
+opt-level = "s"

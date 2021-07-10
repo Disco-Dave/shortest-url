@@ -4,7 +4,6 @@ use settings::DatabaseSettings;
 use settings::HttpSettings;
 use warp::Future;
 
-mod actions;
 mod base62;
 mod database;
 mod http;
