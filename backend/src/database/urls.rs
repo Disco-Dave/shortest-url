@@ -23,8 +23,8 @@ pub async fn insert_url(uri: &Uri, db: &PgPool) -> Result<u64, sqlx::Error> {
         r#"
             INSERT INTO public.urls
             (url)
-            VALUES
-            ($1)
+            SELECT $1
+            WHERE NOT EXISTS (SELECT 'x' FROM public.urls WHERE url = $1)
             ON CONFLICT DO NOTHING;
         "#,
         &url

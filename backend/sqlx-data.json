@@ -1,17 +1,5 @@
 {
   "db": "PostgreSQL",
-  "48bf2b90d971591f745445cff2880d1b076a88bc1971b9250bb4caafc19e3e62": {
-    "query": "\n            INSERT INTO public.urls\n            (url)\n            VALUES\n            ($1)\n            ON CONFLICT DO NOTHING;\n        ",
-    "describe": {
-      "columns": [],
-      "parameters": {
-        "Left": [
-          "Text"
-        ]
-      },
-      "nullable": []
-    }
-  },
   "4a41c1911a09e6d04a33441aaad38fdab99bee234a1fa43bb03e09737c682a32": {
     "query": " \n            SELECT u.url\n            FROM public.urls AS u\n            WHERE u.key = $1;\n        ",
     "describe": {
@@ -50,6 +38,18 @@
       "nullable": [
         false
       ]
+    }
+  },
+  "fb90ab0a2e1e5a0183d95f49c68d323b95a8d3c1952bc5ac4380bdb1d9ce10b8": {
+    "query": "\n            INSERT INTO public.urls\n            (url)\n            SELECT $1\n            WHERE NOT EXISTS (SELECT 'x' FROM public.urls WHERE url = $1)\n            ON CONFLICT DO NOTHING;\n        ",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Left": [
+          "Text"
+        ]
+      },
+      "nullable": []
     }
   }
 }
