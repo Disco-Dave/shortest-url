@@ -1,0 +1,7 @@
+export SHORTEST_URL_HTTP_PORT=4000
+
+export SHORTEST_URL_TRACE_DIRECTIVE="trace"
+export SHORTEST_URL_TRACE_USE_JSON="false"
+
+export SHORTEST_URL_DATABASE_URL="postgres://postgres@localhost:5000/shortest_url?password=password"
+export DATABASE_URL="$SHORTEST_URL_DATABASE_URL"
